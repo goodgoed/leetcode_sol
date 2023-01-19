@@ -5,21 +5,22 @@
  */
 var twoSum = function (nums, target) {
   //1st solution
-  //   if (nums.length > 2) {
-  //     let res = [];
-  //     for (let i = 0; i < nums.length; i++) {
-  //       if (res.length > 0) res = [];
-  //       res.push(i);
-  //       for (let j = 0; j < nums.length; j++) {
-  //         if (i === j) continue;
-  //         if (nums[i] + nums[j] === target) {
-  //           res.push(j);
-  //           return res;
-  //         }
-  //       }
-  //     }
-  //   }
-  //   }
+    if (nums.length > 2) {
+      let res = [];
+      for (let i = 0; i < nums.length; i++) {
+        if (res.length > 0) res = [];
+        res.push(i);
+        for (let j = 0; j < nums.length; j++) {
+          if (i === j) continue;
+          if (nums[i] + nums[j] === target) {
+            res.push(j);
+            return res;
+          }
+        }
+      }
+    }
+    return [0, 1];
+    }
 
   //   return [0, 1];
 
